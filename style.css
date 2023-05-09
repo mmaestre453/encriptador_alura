@@ -1,0 +1,94 @@
+body{
+    background: #E9ECF8;
+}
+
+.logo{
+    margin-top: 30px;
+}
+
+.textoArea{
+    display: flex;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 200px;
+}
+.textoArea:focus{
+    outline: none;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 95px;
+}
+.boton-encriptar{
+    width: 20%;
+    border: none;
+    border-radius: 40px;
+    background: #072B61;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 1s all;
+}
+.boton-encriptar:hover{
+    background: darkblue;
+}
+.boton{
+    width: 20%;
+    border: 2px solid;
+    border-radius: 40px;
+    background: #E9ECF8;
+    color: #072B61;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.area-copiado{
+    float: right;
+    border: 2px solid white;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 1;
+    background: white;
+    margin-top: -150px;
+    border-radius: 15px;
+    margin-right: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#copiado{
+    display: block;
+    background:transparent;
+    border: none;
+    font-size: 15px;
+}
+#copiado:focus{
+    outline: none;
+
+}
+
+form{
+    border: none;
+}
+
+.copiar-btn{
+    width: 85%;
+    border: 2px solid #072B61;
+    padding: 15px;
+    background:transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 1s active;
+}
+
+
+
+
+
+

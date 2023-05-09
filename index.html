@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="tracking.ico" type="image/x-icon">
+    <title>Encriptador</title>
+</head>
+<body>
+
+    <header>
+        <h1><img src="Logo@2x.png" alt="Logo Alura" class="logo"></h1>
+    </header>
+
+    <main>
+        <div class="area-copiado">
+            <form action="">
+                <textarea name="copiado" id="copiado" cols="30" rows="20" placeholder="Hola, como estas?"></textarea>
+                <input type="button" value="Copiar" class="copiar-btn" onclick="copiarTexto()">
+            </form>
+        </div>
+        <textarea name="texto" id="texto" cols="40" rows="5" class="textoArea" placeholder="Ingrese el texto aqui"></textarea>
+    </main>
+
+    <section>
+        <input type="button" value="Encriptar" onclick="encriptar()" class="boton-encriptar">
+        <input type="button" value="Desencriptar" onclick="desencriptar()" class="boton"> 
+    </section>
+    
+</body>
+
+<script>
+    function encriptar(){
+        let valorInput = document.getElementById("texto").value;
+        let valorFinal = valorInput.toLowerCase();
+    
+        let encriptado = valorFinal.replace(/e/g, "enter");
+        encriptado = encriptado.replace(/i/g, "imes");
+        encriptado = encriptado.replace(/a/g, "ai");
+        encriptado = encriptado.replace(/o/g, "ober");
+        encriptado = encriptado.replace(/u/g, "ufat");
+        
+        let textarea = document.getElementById("copiado");
+        let textoGenerado = encriptado;
+        textarea.value = textoGenerado;
+        
+    }
+    function desencriptar(){
+        let valorInput = document.getElementById("copiado").value;
+        let valorFinal = valorInput.toLowerCase();
+        let desencriptado = valorFinal.replace(/ufat/g, "u");
+        desencriptado = desencriptado.replace(/ober/g, "o");
+        desencriptado = desencriptado.replace(/ai/g, "a");
+        desencriptado = desencriptado.replace(/imes/g, "i");
+        desencriptado = desencriptado.replace(/enter/g, "e");
+
+        let textarea = document.getElementById("copiado");
+        let textoGenerado = desencriptado;
+        textarea.value = textoGenerado;
+    }
+
+    function copiarTexto(){
+        var textarea = document.getElementById("copiado");
+        textarea.select();
+        document.execCommand("copy");
+        alert("Copiado exitoso!!");
+    }
+</script>
+</html>
